@@ -3,7 +3,7 @@
 """
 
 from flask import Flask, render_template, request, g
-from flask_babelex import Babel, _
+from flask_babel import Babel, _
 
 
 # Create a Config class to configure app languages and default settings
