@@ -25,18 +25,14 @@ babel = Babel(app)
 @babel.localeselector
 def get_locale():
     """Select a language translation"""
-    # Check if 'locale' is in the URL parameters
-    locale = request.args.get('locale')
-    if locale in app.config['LANGUAGES']:
-        return locale
-    # Fallback to the default locale if the 'locale' parameter is invalid or not present
     return request.accept_languages.best_match(app.config['LANGUAGES'])
+
 
 # Define routes
 @app.route('/')
 def home():
     """A default home route"""
-    return render_template('4-index.html')
+    return render_template('3-index.html')
 
 
 if __name__ == "__main__":
