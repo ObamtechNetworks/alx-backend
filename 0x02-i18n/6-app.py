@@ -45,21 +45,6 @@ def before_request():
     g.user = get_user()
 
 
-@babel.timezoneselector
-def get_timezone():
-    """Select a time zone based on user settings"""
-    if g.user and g.user.get('timezone'):
-        return g.user['timezone']
-    return app.config['BABEL_DEFAULT_TIMEZONE']
-
-
-@app.before_request
-def before_request():
-    """Set the global user and timezone"""
-    g.user = get_user()
-    g.timezone = get_timezone()
-
-
 @babel.localeselector
 def get_locale():
     """Select a language translation based on priority"""
