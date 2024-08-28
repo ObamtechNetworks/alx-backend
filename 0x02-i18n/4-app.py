@@ -29,9 +29,9 @@ def get_locale():
     locale = request.args.get('locale')
     if locale in app.config['LANGUAGES']:
         return locale
-    # Fallback to the default locale if the 'locale' parameter is invalid or not present
+    # Fallback to the default locale if the
+    # 'locale' parameter is invalid or not present
     return request.accept_languages.best_match(app.config['LANGUAGES'])
-
 
 
 # Define routes
