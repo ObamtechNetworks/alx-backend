@@ -17,11 +17,11 @@ class Config:
 
 app = Flask(__name__)
 
-# Apply the Config class to the app's configuration
-app.config.from_object(Config)
-
 # Instantiate Babel with the Flask app
 babel = Babel(app)
+
+# Apply the Config class to the app's configuration
+app.config.from_object(Config)
 
 
 # Define routes
