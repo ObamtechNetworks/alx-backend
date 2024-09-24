@@ -19,7 +19,7 @@ subscriber.on('connect', function() {
 
 
 // listen for messages on the channel
-subscriber.on('message0', (channel, message) => {
+subscriber.on('message', (channel, message) => {
     console.log(message);
 
     // if message is 'KILL_SERVER', unsubscribe and quit
