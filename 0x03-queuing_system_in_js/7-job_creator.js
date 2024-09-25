@@ -69,6 +69,6 @@ jobs.forEach((jobData, index) => {
     });
     // handle 'progress event
     job.on('progress', (progress) => {
-        console.log(`otification job ${job.id} ${progress}% complete`)
+        console.log(`Notification job #${job.id} ${progress}% complete`)
     });
 });
